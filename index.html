@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button id="mode-toggle" class="mode-toggle" title="Toggle dark/light mode">🌙</button>
+    </nav>
+
+    <section id="about" class="section animate-on-scroll">
+        <div class="about-container">
+            <img src="profile.jpeg" alt="Your Photo" class="profile-photo">
+            <div>
+                <h1>Hello, I'm Ansh Tyagi</h1>
+                <p class="about"> A passionate and curious B.Tech Computer Science student currently in my 3rd year. I have a keen interest in Web Development and Data Structures & Algorithms (DSA), and I'm constantly learning and building projects to strengthen my skills.
+My goal is to create impactful digital solutions and write efficient, clean code. I'm enthusiastic about frontend and backend technologies and enjoy solving real-world problems through code.
+Whether it's building responsive websites or tackling algorithmic challenges, I'm always eager to grow and take on new opportunities in the world of tech.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section animate-on-scroll">
+        <h2>Skills Development Steps</h2>
+        <div class="skills-container">
+            <div class="skill-step">
+                <h3>HTML</h3>
+                <div class="skill-bar" data-level="95"><span>95%</span></div>
+            </div>
+            <div class="skill-step">
+                <h3>CSS</h3>
+                <div class="skill-bar" data-level="90"><span>90%</span></div>
+            </div>
+            <div class="skill-step">
+                <h3>JavaScript</h3>
+                <div class="skill-bar" data-level="85"><span>85%</span></div>
+            </div>
+            <div class="skill-step">
+                <h3>Python</h3>
+                <div class="skill-bar" data-level="80"><span>80%</span></div>
+            </div>
+            <div class="skill-step">
+                <h3>Java</h3>
+                <div class="skill-bar" data-level="75"><span>75%</span></div>
+            </div>
+            <div class="skill-step">
+                <h3>C++</h3>
+                <div class="skill-bar" data-level="60"><span>60%</span></div>
+            </div>
+            <div class="skill-step">
+                <h3>C</h3>
+                <div class="skill-bar" data-level="50"><span>50%</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section animate-on-scroll">
+        <h2>Projects</h2>
+        <div class="projects-container">
+            <div class="project">
+                <h3>Portfolio Website</h3>
+                <p style="color: black;">A clean, responsive personal portfolio built with HTML, CSS and JavaScript.</p>
+            </div>
+            <div class="project">
+                <h3>Weather App</h3>
+                <p style="color: black;">Real-time weather app using JavaScript and OpenWeatherMap API.</p>
+            </div>
+            <div class="project">
+                <h3>Hospital Management System</h3>
+                <p style="color: black;"> created a hospital management system using Java AWT</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section animate-on-scroll">
+        <h2>Contact Me</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Your message..." required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

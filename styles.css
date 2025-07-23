@@ -1,0 +1,259 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fafbfc;
+}
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    
+}
+
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #111827;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.09);
+    z-index: 20;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    list-style: none;
+    margin: 0;
+    padding: 20px 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.navbar a:hover {
+    color: #6D28D9;
+}
+
+.section {
+    padding: 100px 20px 60px;
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.profile-photo {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #6D28D9;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 22px;
+    margin-top: 24px;
+}
+
+.skill-step h3 {
+    margin: 0 0 10px;
+    font-size: 1.1em;
+}
+
+.skill-bar {
+    background: #ddd;
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+    height: 24px;
+}
+
+.skill-bar span {
+    position: absolute;
+    right: 12px;
+    top: 2px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.skill-bar::before {
+    content: '';
+    display: block;
+    height: 100%;
+    background: linear-gradient(90deg, #6D28D9 50%, #312e81 100%);
+    width: 0;
+    border-radius: 16px;
+    transition: width 1.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    margin-top: 18px;
+}
+
+.project {
+    padding: 22px;
+    background: #f3f4f6;
+    border-left: 5px solid #6D28D9;
+    border-radius: 12px;
+}
+
+.project h3 {
+    margin: 0 0 5px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    font-size: 1em;
+    padding: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+}
+
+.contact-form button {
+    padding: 10px;
+    background: #6D28D9;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.contact-form button:hover {
+    background: #5b21b6;
+}
+
+@media (max-width: 700px) {
+    .about-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+    }
+    .section {
+        padding: 80px 8px 40px;
+    }
+    .skill-step h3 {
+        font-size: 1em;
+    }
+}
+
+/* Scroll Animations */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s cubic-bezier(0.4,0,0.2,1), transform 0.7s cubic-bezier(0.4,0,0.2,1);
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: none;
+}
+
+/* Big, colorful, cool headings */
+h1, h2, h3 {
+    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+    margin-top: 22px;
+    text-align: center;
+    /* Make headings much bigger */
+    line-height: 1.15;
+}
+
+h1 {
+    font-size: 3em;
+    background: linear-gradient(90deg, #6D28D9, #4ADE80, #F472B6, #FBBF24);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h2 {
+    font-size: 2.4em;
+    background: linear-gradient(90deg, #FBBF24, #06B6D4, #a21caf);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h3 {
+    font-size: 1.6em;
+    color: #6D28D9;
+    text-shadow: 0 2px 8px rgba(77,38,217,0.18);
+}
+.about{
+    font-size: medium;
+    font-weight: 500;
+}
+:root {
+    --bg-main: #fafbfc;
+    --text-main: #231942;
+    --section-bg: rgba(255,255,255,0.96);
+    --navbar-bg: rgba(17, 24, 39, 0.90);
+}
+
+body {
+    background: var(--bg-main);
+    color: var(--text-main);
+    transition: background 0.4s, color 0.4s;
+}
+
+/* Apply to section backgrounds, paragraphs, etc. */
+.section,
+.about-container p {
+    background: var(--section-bg);
+}
+
+.navbar {
+    background: var(--navbar-bg);
+}
+
+/* Dark mode overrides */
+body.dark-mode {
+    --bg-main: #181924;
+    --text-main: #f3f4f6;
+    --section-bg: rgba(34,36,49,0.98);
+    --navbar-bg: rgba(12,12,18,0.94);
+}
+
+/* Mode Toggle Button Styling */
+.mode-toggle {
+    background: none;
+    border: none;
+    font-size: 1.8em;
+    color: #FBBF24;
+    cursor: pointer;
+    margin-left: 26px;
+    outline: none;
+    transition: color 0.25s;
+}
+body.dark-mode .mode-toggle {
+    color: #60A5FA;
+}
